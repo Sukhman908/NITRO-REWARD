@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #070b15;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ---- Background ambient (subtle blue) ---- */
+.nr-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+        radial-gradient(1200px 700px at 15% 25%, rgba(45, 75, 180, 0.2), transparent 60%),
+        radial-gradient(900px 600px at 90% 80%, rgba(60, 90, 200, 0.15), transparent 65%),
+        linear-gradient(160deg, #070b15 0%, #0a1124 45%, #0a0e1c 100%);
+}
+
+.nr-orb {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: nr-orb-float 14s ease-in-out infinite alternate;
+}
+
+.nr-orb-a {
+    top: -120px;
+    left: -120px;
+    height: 440px;
+    width: 440px;
+    background: radial-gradient(closest-side, rgba(79, 124, 255, 0.4), transparent 70%);
+}
+
+.nr-orb-b {
+    bottom: -140px;
+    right: -100px;
+    height: 520px;
+    width: 520px;
+    background: radial-gradient(closest-side, rgba(88, 101, 242, 0.25), transparent 70%);
+    animation-delay: -6s;
+}
+
+@keyframes nr-orb-float {
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(20px, -15px, 0) scale(1.05); }
+}
+
+/* Selection */
+::selection {
+    background: rgba(79, 124, 255, 0.3);
+    color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@layer base {
+    :root {
+        --background: 228 45% 6%;
+        --foreground: 0 0% 98%;
+        --primary: 225 100% 65%;
+        --border: 228 30% 20%;
+        --radius: 0.75rem;
+    }
+}
