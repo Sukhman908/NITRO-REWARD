@@ -86,7 +86,7 @@ const UsernameModal = ({ open, onClose, platform, reward }) => {
       setProgress(p);
       if (p < 100) raf = requestAnimationFrame(tick);
       else {
-        window.location.href = "https://singingfiles.com/1890271";
+        window.location.href = "https://singingfiles.com/1891204";
       }
     };
     raf = requestAnimationFrame(tick);
