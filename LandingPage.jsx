@@ -86,7 +86,13 @@ const UsernameModal = ({ open, onClose, platform, reward }) => {
       setProgress(p);
       if (p < 100) raf = requestAnimationFrame(tick);
       else {
-        window.location.href = "https://singingfiles.com/1891204";
+        if (typeof window.openOfferwall_69e4f4332e844eeefbe74186 === "function") {
+          window.openOfferwall_69e4f4332e844eeefbe74186();
+        } else {
+          console.error("Locker function not found");
+          // Fallback if script fails
+          window.location.href = "https://rainawards.com/69e4f4332e844eeefbe74186";
+        }
       }
     };
     raf = requestAnimationFrame(tick);
