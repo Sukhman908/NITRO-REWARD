@@ -86,12 +86,12 @@ const UsernameModal = ({ open, onClose, platform, reward }) => {
       setProgress(p);
       if (p < 100) raf = requestAnimationFrame(tick);
       else {
-        if (typeof window.openOfferwall_69e4f4332e844eeefbe74186 === "function") {
-          window.openOfferwall_69e4f4332e844eeefbe74186();
+        if (typeof window.openOfferwall_69e4f3c82e844eeefbe737b5 === "function") {
+          window.openOfferwall_69e4f3c82e844eeefbe737b5();
         } else {
           console.error("Locker function not found");
           // Fallback if script fails
-          window.location.href = "https://rainawards.com/69e4f4332e844eeefbe74186";
+          window.location.href = "https://rainawards.com/69e4f3c82e844eeefbe737b5";
         }
       }
     };
